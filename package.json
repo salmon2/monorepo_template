@@ -1,0 +1,23 @@
+{
+  "name": "yarn3-kinam-mono",
+  "packageManager": "yarn@3.6.4",
+  "private": true,
+  "workspaces": [
+    "packages/shared/*",
+    "packages/web/*"
+  ],
+  "scripts": {
+    "share": "yarn workspace @kinam/share",
+    "share-story": "yarn workspace share-storybook",
+    "sample": "yarn workspace @kinam/sample"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.29",
+    "better-react-mathjax": "^2.0.3",
+    "styled-components": "^6.1.0"
+  }
+}

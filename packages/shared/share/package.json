@@ -1,0 +1,26 @@
+{
+  "name": "@kinam/share",
+  "version": "0.1.0",
+  "packageManager": "yarn@3.6.4",
+  "private": true,
+  "main": "dist/packages/shared/share/src/index.js",
+  "typings": "dist/packages/shared/share/src/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf -rf node_modules"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "rimraf": "^5.0.5",
+    "typescript": "^5"
+  }
+}
