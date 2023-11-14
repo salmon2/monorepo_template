@@ -7,6 +7,7 @@
     "packages/web/*"
   ],
   "scripts": {
+    "init_project": "yarn install && yarn share install && yarn share build ",
     "share": "yarn workspace @kinam/share",
     "share-story": "yarn workspace share-storybook",
     "sample": "yarn workspace @kinam/sample"

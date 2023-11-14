@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@kinam/share";
 
 const meta: Meta<typeof Button> = {
-  title: "DT/common/Button",
+  title: "Common/Button",
   component: Button,
   tags: ["autodocs"],
   argTypes: {},
