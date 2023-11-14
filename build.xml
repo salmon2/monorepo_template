@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="monorepo" default="about" basedir=".">
+
+    <property name="build.dir" value="${basedir}/build"/>
+    <property name="pj-sample.path" value="packages/web/sample"/>
+
+    <tstamp>
+        <format property="DSTAMP" pattern="YYYY-MM-dd" />
+        <format property="TSTAMP" pattern="HHmmss" />
+    </tstamp>
+
+    <fileset id="common"  dir="${basedir}" includes=".yarn/**/*, node_modules/**/*, package.json, Procfile, yarn.lock"/>
+    <fileset id="pkg-sample"  dir="${basedir}/${pj-sample.path}" includes=".next/**/*, public/**/*, .env.local, image-loader.js, next.config.js, package.json"/>
+
+    <!-- zip source -->
+    <target name="sample">
+        <property name="zip.name"		value="sample_${DSTAMP}_${TSTAMP}.zip"/>
+      <delete dir="${basedir}/.next"/>
+
+        <exec executable="cmd" osfamily="windows">
+            <arg value="/c"/>
+            <arg value="yarn"/>  <arg value="install"/>
+        </exec>
+        <exec executable="cmd" osfamily="windows">
+            <arg value="/c"/>
+            <arg value="yarn"/> <arg value="sample"/> <arg value="build"/>
+        </exec>
+
+        <zip destfile="${build.dir}/${zip.name}">
+            <zipfileset refid="common" />
+            <zipfileset refid="pkg-sample" prefix="${pj-sample.path}" />
+        </zip>
+    </target>
+
+
+
+    <!-- project info -->
+    <target name="about" description="about this dist file">
+        <echo message="targets include: "/>
+        <echo message="   -------------------------------------------------"/>
+        <echo message=" - package-sample            : package sample zip"/> 
+        <echo message="   -------------------------------------------------"/>
+    </target>
+</project>
