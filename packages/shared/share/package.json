@@ -9,17 +9,16 @@
     "dist/**/*"
   ],
   "scripts": {
-    "build": "tsc",
-    "clean": "rimraf -rf node_modules"
+    "build": "yarn clean && tsc",
+    "build-monitor": "tsc --watch",
+    "clean": "rimraf -rf dist"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18"
+    "react-select": "^5.8.0",
+    "styled-components": "^6.1.1"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
     "rimraf": "^5.0.5",
     "typescript": "^5"
   }

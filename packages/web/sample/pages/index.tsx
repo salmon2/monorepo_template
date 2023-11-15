@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { Button, Combine } from "@kinam/share";
+import { Button, Combine, Select } from "@kinam/share";
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
     >
       <Button>기남</Button>
       <Combine />
+      <Select />
     </div>
   );
 }
