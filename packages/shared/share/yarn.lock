@@ -240,6 +240,7 @@ __metadata:
   resolution: "@kinam/share@workspace:."
   dependencies:
     "@types/node": "npm:^20"
+    corepack: "npm:^0.23.0"
     react-select: "npm:^5.8.0"
     rimraf: "npm:^5.0.5"
     styled-components: "npm:^6.1.1"
@@ -438,6 +439,19 @@ __metadata:
   version: 1.9.0
   resolution: "convert-source-map@npm:1.9.0"
   checksum: 281da55454bf8126cbc6625385928c43479f2060984180c42f3a86c8b8c12720a24eac260624a7d1e090004028d2dee78602330578ceec1a08e27cb8bb0a8a5b
+  languageName: node
+  linkType: hard
+
+"corepack@npm:^0.23.0":
+  version: 0.23.0
+  resolution: "corepack@npm:0.23.0"
+  bin:
+    corepack: ./dist/corepack.js
+    pnpm: ./dist/pnpm.js
+    pnpx: ./dist/pnpx.js
+    yarn: ./dist/yarn.js
+    yarnpkg: ./dist/yarnpkg.js
+  checksum: 7bd4c08b4ff9c175109e86c6286c994fc6ecddb23bad93b28e128675ff7b1f635495b461fb85dbf3c0ae53682ffde178a7fb0ef93dff3d8e261ae4dd68fc3ae8
   languageName: node
   linkType: hard
 
