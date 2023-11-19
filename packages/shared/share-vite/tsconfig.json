@@ -1,0 +1,14 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react", // 중요
+    "outDir": "./dist",
+    "noEmit": false,
+    "baseUrl": ".",
+    "paths": {
+      "@kinam/share-vite/*": ["src/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

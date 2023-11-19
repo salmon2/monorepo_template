@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { Button, Combine, Select } from "@kinam/share";
+import { Button, Combine, Select } from "@kinam/share-vite";
 
 export default function Home() {
   return (
